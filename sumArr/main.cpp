@@ -44,12 +44,11 @@ int main(int argc, char** argv){
             arrayToSum[i] = i + 1;
          }
         
-        MPI_Barrier(MPI_COMM_WORLD);
+        
         
     }
-    else{
-        MPI_Barrier(MPI_COMM_WORLD);
-    }
+   
+    MPI_Barrier(MPI_COMM_WORLD);
     
     MPI_Bcast(&avg, 1, MPI_INT, rootProcess, MPI_COMM_WORLD);
     
